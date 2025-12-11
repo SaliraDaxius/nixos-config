@@ -51,7 +51,7 @@
     variant = "";
   };
 
-  sound.enable = true;
+  # sound.enable = true; # Apparently this is obselete
   # rtkit (optional, recommended) allows Pipewire to use the realtime scheduler for increased performance.
   security.rtkit.enable = true;
   services.pipewire = {
