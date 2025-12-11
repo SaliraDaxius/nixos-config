@@ -45,11 +45,6 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Hardware
-  hardware = {
-    bluetooth.enable = true;
-  };
-
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -94,6 +89,7 @@
   #  wget
     git
     alacritty
+    tree
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
