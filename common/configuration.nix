@@ -50,30 +50,26 @@
     bluetooth.enable = true;
   };
 
-  # Services
-  services = {
-    # Configure keymap in X11
-    xserver.xkb = {
-      layout = "us";
-      variant = "";
-    };
-
-    # Setting up KDE Plasma with Aki's help
-    /* Moved to plasma.nix
-    xserver.enable = true;
-    desktopManager.plasma6.enable = true;
-    displayManager = {
-      sddm = {
-        enable = true;
-        autoNumlock = true;
-        wayland.enable = true;
-      };
-    };
-    */
-
-    # Bluetooth manager, if not provided by desktop environment
-    # blueman.enable = true;
+  # Configure keymap in X11
+  services.xserver.xkb = {
+    layout = "us";
+    variant = "";
   };
+
+  sound.enable = true;
+  # rtkit (optional, recommended) allows Pipewire to use the realtime scheduler for increased performance.
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true; # if not already enabled
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    # If you want to use JACK applications, uncomment the following
+    jack.enable = true;
+  };
+
+  # Bluetooth manager, if not provided by desktop environment
+  # services.blueman.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.salira = {
@@ -107,6 +103,7 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
     git
+    alacritty
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
