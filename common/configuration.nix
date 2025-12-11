@@ -80,18 +80,8 @@
       vesktop
       firefox
       obsidian
+      tidal-hifi
     ];
-  };
-
-  # Programs
-  programs = {
-
-    steam = {
-      enable = true;
-      remotePlay.openFirewall = true;
-      dedicatedServer.openFirewall = true;
-    };
-
   };
 
   # Allow unfree packages
