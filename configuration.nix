@@ -59,6 +59,7 @@
     };
 
     # Setting up KDE Plasma with Aki's help
+    /* Moved to plasma.nix
     xserver.enable = true;
     desktopManager.plasma6.enable = true;
     displayManager = {
@@ -68,6 +69,7 @@
         wayland.enable = true;
       };
     };
+    */
 
     # Bluetooth manager, if not provided by desktop environment
     # blueman.enable = true;
