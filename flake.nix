@@ -7,15 +7,22 @@
 
   outputs = { self, nixpkgs }: {
 
-    nixosConfigurations.theseus = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
+    nixosConfigurations = {
+      theseus = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/theseus
+          ./common
+        ];
+      };
 
-      modules = [
-        ./configuration.nix
-        ./hosts/theseus
-        ./common
-      ];
+      hazel = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/hazel
+          ./common
+        ];
+      };
     };
-
   };
 }
