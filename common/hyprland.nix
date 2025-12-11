@@ -5,6 +5,10 @@
     xwayland.enable = true; # Xwayland can be disabled.
   };
 
+  # Desktop portal
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+
   environment.systemPackages = with pkgs; [
     # Default terminal, can be removed once config is set to preference
     kitty
@@ -15,9 +19,5 @@
     # Notification daemon (one is required)
     dunst
     # mako # Users say this is dunst but with more options
-
-    # Desktop portal
-    xdg.portal.enable = true;
-    xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   ];
 }
