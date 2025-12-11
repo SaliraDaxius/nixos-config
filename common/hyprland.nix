@@ -3,7 +3,7 @@
     enable = true;
     withUWSM = true; # recommended for most users
     xwayland.enable = true; # Xwayland can be disabled.
-    nvidiaPatches = true;
+    # nvidiaPatches = true; # Obsolete
   };
 
   # Desktop portal
