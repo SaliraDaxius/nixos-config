@@ -33,5 +33,10 @@
     waybar
 
     rofi
+
+    hyprpolkitagent     # Authentication agent
+    qt5-wayland
+    qt6-wayland
+    noto-fonts
   ];
 }
