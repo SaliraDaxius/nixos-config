@@ -35,8 +35,8 @@
     rofi
 
     hyprpolkitagent     # Authentication agent
-    qt5-wayland
-    qt6-wayland
+    # qt5-wayland       # Doesn't exist
+    # qt6-wayland       # Doesn't exist
     noto-fonts
   ];
 }
