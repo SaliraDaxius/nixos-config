@@ -5,6 +5,8 @@
 { config, pkgs, ... }:
 
 {
+  nixpkgs.overlays = [ (self: super: import ../pkgs { pkgs = super; }) ];
+
   imports =
     [ # Include the results of the hardware scan.
       # ./hardware-configuration.nix
