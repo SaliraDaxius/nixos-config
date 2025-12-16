@@ -7,9 +7,9 @@
     users.salira = {
       programs = {
         vscode = {
-	  enable = true;
-	  package = pkgs.vscodium;
-	};
+          enable = true;
+          package = pkgs.vscodium;
+        };
       };
     };
   };
