@@ -10,4 +10,8 @@
       };
     };
   };
+
+  users.users.salira.packages = with pkgs; [
+    kdePackages.kalarm
+  ];
 }
