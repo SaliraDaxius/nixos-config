@@ -78,6 +78,8 @@
       firefox
       obsidian
       tidal-hifi
+      yt-dlp
+      ffmpeg
     ];
     home = "/home/salira";
   };
@@ -95,6 +97,14 @@
     tree
   ];
 
+  home-manager = {
+    users.salira = {
+      services.kdeconnect.enable = true;
+    };
+  };
+
+  
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -111,6 +121,11 @@
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
+  networking.firewall = rec {
+    allowedTCPPortRanges = [ {from = 1714; to = 1764; } ];   # for KDE Connect
+    allowedUDPPortRanges = allowedTCPPortRanges;
+  };
+
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
