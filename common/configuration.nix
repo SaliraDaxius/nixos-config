@@ -97,13 +97,22 @@
     tree
   ];
 
+  environment.sessionVariables = {
+    TERMINAL = "alacritty";
+    EDITOR = "nvim";
+  };
+
   home-manager = {
     users.salira = {
       services.kdeconnect.enable = true;
     };
   };
 
-  
+  # Set default terminal
+  xdg.terminal-exec = {
+    enable = true;
+    settings.default = [ "alacritty.desktop" ];
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
