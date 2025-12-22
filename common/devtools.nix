@@ -1,6 +1,6 @@
 { pkgs, config, ... }: {
   users.users.salira.packages = with pkgs; [
-    jetbrains.idea-community
+    jetbrains.idea-oss
   ];
 
   home-manager = {
