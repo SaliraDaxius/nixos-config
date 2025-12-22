@@ -97,6 +97,22 @@
     tree
   ];
 
+  fonts = {
+    packages = with pkgs; [
+      minecraftia
+      monocraft
+    ];
+
+    fontconfig = {
+      enable = true;
+      defaultFonts = {
+        serif = [ "Minecraftia" ];
+        sansSerif = [ "Minecraftia" ];
+        monospace = [ "Monocraft" ];
+      };
+    };
+  };
+
   environment.sessionVariables = {
     TERMINAL = "alacritty";
     EDITOR = "nvim";
