@@ -63,7 +63,7 @@ stdenv.mkDerivation {
 
         setsid sh -c '
           lovr-playspace &
-          wlx-overlay-s --replace &
+          WEBKIT_DISABLE_DMABUF_RENDERER=1 WEBKIT_DISABLE_COMPOSITING_MODE=1 wlx-overlay-s --replace &
           wait
         ' &
         PGID=$!
