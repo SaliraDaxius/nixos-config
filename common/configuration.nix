@@ -80,6 +80,7 @@
       tidal-hifi
       yt-dlp
       ffmpeg
+      easyeffects
     ];
     home = "/home/salira";
   };
