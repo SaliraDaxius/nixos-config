@@ -96,6 +96,7 @@
     alacritty
     tree
     nixd
+    konsave
   ];
 
   fonts = {

@@ -21,6 +21,7 @@
     users.salira = { pkgs, ...}: {
       programs.plasma = {
         enable = true;
+        # overrideConfig = true;
 
         workspace = {
           theme = "Breeze Dark";
@@ -32,6 +33,13 @@
           effects = {
             blur.enable = true;
             translucency.enable = true;
+          };
+        };
+
+        fonts = {
+          fixedWidth = {
+            family = "Monocraft";
+            pointSize = 10;
           };
         };
       };
