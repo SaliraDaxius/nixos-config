@@ -95,6 +95,7 @@
     git
     alacritty
     tree
+    nixd
   ];
 
   fonts = {
