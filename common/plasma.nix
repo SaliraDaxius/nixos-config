@@ -41,6 +41,27 @@
             family = "Monocraft";
             pointSize = 10;
           };
+          general = {
+            family = "Minecraftia";
+            pointSize = 9;
+          };
+          small = {
+            family = "Minecraftia";
+            pointSize = 7;
+          };
+          toolbar = {
+            family = "Minecraftia";
+            pointSize = 9;
+          };
+          menu = {
+            family = "Minecraftia";
+            pointSize = 9;
+          };
+          windowTitle = {
+            family = "Minecraftia";
+            pointSize = 9;
+            capitalization = "allUppercase";
+          };
         };
       };
     };
