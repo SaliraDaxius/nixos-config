@@ -1,4 +1,5 @@
-{ pkgs, config, ... }: {
+{ pkgs, ... }:
+{
   users.users.salira.packages = with pkgs; [
     jetbrains.idea-oss
     nil
