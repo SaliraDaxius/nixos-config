@@ -13,4 +13,8 @@
       };
     };
   };
+
+  # IntelliJ needs this to build my project.
+  # TODO: Figure out the "nix way" of doing development environments for Java
+  programs.nix-ld.enable = true;
 }
