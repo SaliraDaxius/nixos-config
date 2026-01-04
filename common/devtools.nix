@@ -8,11 +8,18 @@
   home-manager = {
     users.salira = {
       programs = {
+
         vscode = {
           enable = true;
           package = pkgs.vscodium;
         };
+
       };
+
+      home.packages = with pkgs; [
+        blockbench
+      ];
+
     };
   };
 
