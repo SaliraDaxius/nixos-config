@@ -4,5 +4,6 @@
     ./nvidia.nix
     ./config.nix
     ./vr.nix
+    ./server.nix
   ];
 }
