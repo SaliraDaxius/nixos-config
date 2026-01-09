@@ -150,7 +150,10 @@
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   networking.firewall = rec {
-    allowedTCPPortRanges = [ {from = 1714; to = 1764; } ];   # for KDE Connect
+    allowedTCPPortRanges = [
+      {from = 1714; to = 1764;}
+      {from = 25565; to = 25565;}
+    ];   # for KDE Connect
     allowedUDPPortRanges = allowedTCPPortRanges;
   };
 
