@@ -48,7 +48,7 @@ in
       STEAMVR_LH_ENABLE = "true";
       XRT_COMPOSITOR_COMPUTE = "1";
       XRT_COMPOSITOR_SCALE_PERCENTAGE = "150";
-      XRT_COMPOSITOR_DESIRED_MODE = "1";
+      XRT_COMPOSITOR_DESIRED_MODE = "0";
       # 0: 2880x1600@90.00 1: 2880x1600@144.00 2: 2880x1600@120.02 3: 2880x1600@80.00 4: 1920x1200@90.00
       # 5: 1920x1080@90.00 6: 1600x1200@90.00 7: 1680x1050@90.00 8: 1280x1024@90.00 9: 1440x900@90.00
       # 10: 1280x800@90.00 11: 1280x720@90.00 12: 1024x768@90.00 13: 800x600@90.00 14: 640x480@90.00
@@ -100,7 +100,7 @@ in
           "notifications_enabled": true,
           "notifications_sound_enabled": true,
           "realign_on_showhide": true,
-          "allow_sliding": true,
+          "allow_sliding": false,
           "space_drag_multiplier": 1.0,
           "block_game_input": true
         }
