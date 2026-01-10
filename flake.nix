@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.11";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     nixpkgs-xr.url = "github:nix-community/nixpkgs-xr";
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
@@ -21,7 +22,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs: {
 
     nixosConfigurations = {
       theseus = nixpkgs.lib.nixosSystem {
