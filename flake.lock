@@ -109,6 +109,26 @@
         "type": "github"
       }
     },
+    "nix-gaming-edge": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1767681912,
+        "narHash": "sha256-zJ1EJzI5/jCttWZJMtRdgJHiw0cGUEVd8512czjTLgo=",
+        "owner": "powerofthe69",
+        "repo": "nix-gaming-edge",
+        "rev": "1997b6427dd3fa65ef258eb86dfa1f9e183acfe9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "powerofthe69",
+        "repo": "nix-gaming-edge",
+        "type": "github"
+      }
+    },
     "nix-minecraft": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -273,6 +293,7 @@
       "inputs": {
         "buttplug-lite": "buttplug-lite",
         "home-manager": "home-manager",
+        "nix-gaming-edge": "nix-gaming-edge",
         "nix-minecraft": "nix-minecraft",
         "nixpkgs": "nixpkgs_2",
         "nixpkgs-unstable": "nixpkgs-unstable",

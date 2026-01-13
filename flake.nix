@@ -20,9 +20,21 @@
       url = "github:runtime-shady-backroom/buttplug-lite";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-gaming-edge = {
+      url = "github:powerofthe69/nix-gaming-edge";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs: {
+  outputs = {
+    self,
+    nixpkgs,
+    nixpkgs-unstable,
+    home-manager,
+    nixpkgs-xr,
+    nix-gaming-edge,
+    ...
+  }@inputs: {
 
     nixosConfigurations = {
       theseus = nixpkgs.lib.nixosSystem {
@@ -30,8 +42,9 @@
         modules = [
           ./hosts/theseus
           ./common
-          inputs.home-manager.nixosModules.home-manager
-          inputs.nixpkgs-xr.nixosModules.nixpkgs-xr
+          home-manager.nixosModules.home-manager
+          nixpkgs-xr.nixosModules.nixpkgs-xr
+          nix-gaming-edge.nixosModules.mesa-git
         ];
         specialArgs = inputs;
       };
@@ -41,7 +54,7 @@
         modules = [
           ./hosts/hazel
           ./common
-          inputs.home-manager.nixosModules.home-manager
+          home-manager.nixosModules.home-manager
         ];
         specialArgs = inputs;
       };

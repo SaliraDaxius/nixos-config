@@ -1,5 +1,6 @@
 {
   pkgs,
+  nix-gaming-edge,
   buttplug-lite,
   ...
 }:
@@ -19,6 +20,12 @@ let
   };
 in
 {
+  nixpkgs.overlays = [ nix-gaming-edge.overlays.mesa-git ];
+
+  drivers.mesa-git = {
+    enable = true;
+  };
+
   programs.steam = {
     extraCompatPackages = with pkgs; [ proton-ge-rtsp-bin ];
   };
