@@ -47,13 +47,14 @@ in
     environment = {
       STEAMVR_LH_ENABLE = "true";
       XRT_COMPOSITOR_COMPUTE = "1";
-      XRT_COMPOSITOR_SCALE_PERCENTAGE = "150";
+      XRT_COMPOSITOR_SCALE_PERCENTAGE = "200";
       XRT_COMPOSITOR_DESIRED_MODE = "1";
       # 0: 2880x1600@90.00 1: 2880x1600@144.00 2: 2880x1600@120.02 3: 2880x1600@80.00 4: 1920x1200@90.00
       # 5: 1920x1080@90.00 6: 1600x1200@90.00 7: 1680x1050@90.00 8: 1280x1024@90.00 9: 1440x900@90.00
       # 10: 1280x800@90.00 11: 1280x720@90.00 12: 1024x768@90.00 13: 800x600@90.00 14: 640x480@90.00
       XRT_COMPOSITOR_USE_PRESENT_WAIT = "1"; # NVIDIA "fix" for stuttering -> https://forums.developer.nvidia.com/t/substantial-drm-lease-presentation-latency-resulting-in-unusable-vr-hmd-experience/332386
       U_PACING_COMP_TIME_FRACTION_PERCENT = "90"; # NVIDIA "fix" for stuttering -> https://forums.developer.nvidia.com/t/substantial-drm-lease-presentation-latency-resulting-in-unusable-vr-hmd-experience/332386
+      # U_PACING_COMP_MIN_TIME_MS = "8"; # Potential fix for view stuttering, if needed -> https://lvra.gitlab.io/docs/distros/nixos/#monado
     };
   };
 
