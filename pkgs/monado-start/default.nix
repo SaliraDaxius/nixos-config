@@ -2,8 +2,7 @@
   makeDesktopItem,
   stdenv,
   writeShellApplication,
-  wlx-overlay-s,
-  wayvr-dashboard,
+  wayvr,
   lighthouse-steamvr,
   lovr-playspace,
   ...
@@ -25,8 +24,7 @@ stdenv.mkDerivation {
     name = "monado-start";
 
     runtimeInputs = [
-      wlx-overlay-s
-      wayvr-dashboard
+      wayvr
       lighthouse-steamvr
       lovr-playspace
     ];
@@ -63,7 +61,7 @@ stdenv.mkDerivation {
 
         setsid sh -c '
           lovr-playspace &
-          wlx-overlay-s --replace &
+          wayvr --replace &
           wait
         ' &
         PGID=$!
