@@ -53,13 +53,17 @@ in
     serviceConfig.LimitNOFILE = 8192;
     environment = {
       STEAMVR_LH_ENABLE = "true";
-      XRT_COMPOSITOR_COMPUTE = "1";
+
+      XRT_COMPOSITOR_COMPUTE = "0"; # YOU FUCKER. the whole time i thought you were helping me BUT YOU WERE THE CAUSE ALL ALONG.
+                                    # you were perfectly content to just SIT HERE AND WATCH while i struggled with genuine insanity,
+                                    # looking at every single variable but YOU. AND YOU SAID NOTHING!!!
+
       XRT_COMPOSITOR_SCALE_PERCENTAGE = "200";
       XRT_COMPOSITOR_DESIRED_MODE = "0";
-      # 0: 2880x1600@90.00
-      # 1: 2880x1600@80.00
-      # 2: 2880x1600@120.02
-      # 3: 2880x1600@144.00
+        # 0: 2880x1600@90.00
+        # 1: 2880x1600@80.00
+        # 2: 2880x1600@120.02
+        # 3: 2880x1600@144.00
       XRT_COMPOSITOR_USE_PRESENT_WAIT = "1"; # NVIDIA "fix" for stuttering -> https://forums.developer.nvidia.com/t/substantial-drm-lease-presentation-latency-resulting-in-unusable-vr-hmd-experience/332386
       U_PACING_COMP_TIME_FRACTION_PERCENT = "90"; # NVIDIA "fix" for stuttering -> https://forums.developer.nvidia.com/t/substantial-drm-lease-presentation-latency-resulting-in-unusable-vr-hmd-experience/332386
       U_PACING_COMP_MIN_TIME_MS = "15"; # Potential fix for view stuttering, if needed -> https://lvra.gitlab.io/docs/distros/nixos/#monado
