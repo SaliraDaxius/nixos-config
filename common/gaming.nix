@@ -8,7 +8,6 @@ in
 {
   environment.systemPackages = with pkgs; [
     # prismlauncher
-    xivlauncher
   ];
 
   programs.steam = {
@@ -22,6 +21,8 @@ in
     users.salira = {
       home.packages = with pkgs; [
         unstable.prismlauncher
+        vintagestory
+        xivlauncher
       ];
     };
   };
