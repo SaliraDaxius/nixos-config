@@ -58,7 +58,7 @@ in
                                     # you were perfectly content to just SIT HERE AND WATCH while i struggled with genuine insanity,
                                     # looking at every single variable but YOU. AND YOU SAID NOTHING!!!
 
-      XRT_COMPOSITOR_SCALE_PERCENTAGE = "200";
+      XRT_COMPOSITOR_SCALE_PERCENTAGE = "150";
       XRT_COMPOSITOR_DESIRED_MODE = "0";
         # 0: 2880x1600@90.00
         # 1: 2880x1600@80.00
@@ -98,7 +98,7 @@ in
         }
       '';
 
-      xdg.configFile."wlxoverlay/conf.d/zz-saved-config.json5".text = ''
+      xdg.configFile."wayvr/conf.d/zz-saved-config.json5".text = ''
         {
           "watch_pos": [
             -0.059999954,
