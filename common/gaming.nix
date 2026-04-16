@@ -1,4 +1,9 @@
-{ config, pkgs, nixpkgs-unstable, ... }:
+{
+  config,
+  pkgs,
+  nixpkgs-unstable,
+  ...
+}:
 let
   unstable = import nixpkgs-unstable {
     system = pkgs.system;
@@ -23,6 +28,7 @@ in
         unstable.prismlauncher
         vintagestory
         xivlauncher
+        ckan
       ];
     };
   };
